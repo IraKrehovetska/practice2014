@@ -2,102 +2,91 @@
 
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
+use Yii;
+
+/**
+ * This is the model class for table "users".
+ *
+ * @property integer $user_id
+ * @property string $email
+ * @property string $password
+ * @property string $name
+ * @property string $picture
+ * @property string $google_uid
+ * @property integer $role_id
+ *
+ * @property Comments[] $comments
+ * @property Messages[] $messages
+ * @property Travels[] $travels
+ * @property Roles $role
+ */
+class User extends \yii\db\ActiveRecord
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-
     /**
      * @inheritdoc
      */
-    public static function findIdentity($id)
+    public static function tableName()
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        return 'users';
     }
 
     /**
      * @inheritdoc
      */
-    public static function findIdentityByAccessToken($token, $type = null)
+    public function rules()
     {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * Finds user by username
-     *
-     * @param  string      $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
+        return [
+            [['email', 'password', 'role_id'], 'required'],
+            [['role_id'], 'integer'],
+            [['email', 'password', 'name', 'picture', 'google_uid'], 'string', 'max' => 45]
+        ];
     }
 
     /**
      * @inheritdoc
      */
-    public function getId()
+    public function attributeLabels()
     {
-        return $this->id;
+        return [
+            'user_id' => 'User ID',
+            'email' => 'Email',
+            'password' => 'Password',
+            'name' => 'Name',
+            'picture' => 'Picture',
+            'google_uid' => 'Google Uid',
+            'role_id' => 'Role ID',
+        ];
     }
 
     /**
-     * @inheritdoc
+     * @return \yii\db\ActiveQuery
      */
-    public function getAuthKey()
+    public function getComments()
     {
-        return $this->authKey;
+        return $this->hasMany(Comments::className(), ['user_id' => 'user_id']);
     }
 
     /**
-     * @inheritdoc
+     * @return \yii\db\ActiveQuery
      */
-    public function validateAuthKey($authKey)
+    public function getMessages()
     {
-        return $this->authKey === $authKey;
+        return $this->hasMany(Messages::className(), ['sender_id' => 'user_id']);
     }
 
     /**
-     * Validates password
-     *
-     * @param  string  $password password to validate
-     * @return boolean if password provided is valid for current user
+     * @return \yii\db\ActiveQuery
      */
-    public function validatePassword($password)
+    public function getTravels()
     {
-        return $this->password === $password;
+        return $this->hasMany(Travels::className(), ['user_id' => 'user_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRole()
+    {
+        return $this->hasOne(Roles::className(), ['role_id' => 'role_id']);
     }
 }

@@ -1,0 +1,304 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+@font-face {
+    font-family: 'TitleFont';
+    src: url('../fonts/Xiomara-Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+body{
+	/* background-color: #F0FFFF; */
+	background-color: #ffffff;
+}
+#content{
+	height: 100vh;
+	float: left;
+	background-color: #DFEFF0;
+	overflow: auto;
+	color: #27525E;
+}
+#content .header{
+	padding: 5px;
+	height: 90px;
+	background-color: #fff;
+	color: #27525E;
+}
+#content .header .row{
+	margin-bottom: 5px;
+}
+#content .header .btn{
+	height: 35px;
+
+}
+#content .header h2{
+	color: #B2D4EB;
+}
+#content .header .btn-arrows{
+	border: none;
+}
+#content .header .form-control{
+	height: 35px;
+}
+#content .trw-content{
+	text-align: center;
+}
+#content .trw-travel{
+	display: block;
+	width: 97%;
+	background-color: #fff;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+#content .trw-travel .trw-travel-img{
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+}
+#content .trw-travel .trw-travel-img img{
+	display: block;
+	height: 130px;	
+	width: 130px;
+	border-radius: 100%;
+	margin-top: 10px;
+} 
+#content .trw-travel .descr{
+	padding: 10px;
+	height: 100%;
+	border-left: 3px solid #DFEFF0;
+	border-right: 3px solid #DFEFF0;
+	font-size: 1em;
+}
+#content .trw-travel .descr .aux-text{
+	color: #A09896;
+}
+#content .pager{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#content .trw-travel .price{
+	border-right: 3px solid #DFEFF0;
+	height: 100%;
+	font-size: 2em;
+	text-align: center;
+	line-height: 150px;
+}
+#content .trw-travel .actions{
+	text-align: center;
+}
+#content .trw-travel .actions span{
+	font-size: 2em;
+	display: block;
+	line-height: 150px;
+	color: #20BF00;
+}
+#content .trw-travel .trw-border{
+	height: 100%;
+	text-align: center;
+	color: white;
+}
+#content .trw-travel .pass{
+	background-color: #54EBBB;
+}
+#content .trw-travel .driver{
+	background-color: #58A8F5;
+}
+#content .trw-travel .trw-border span{
+	display: block;
+}
+#sidebar{
+	background-color: #27525E;
+	height: 100vh;
+	color: #ffffff;
+	padding: 0px;
+	padding-top: 10px;
+	overflow-y: hidden;
+	overflow-x: hidden; 
+	
+}
+#sidebar .profile{
+	height: 15%;
+}
+#sidebar .profile-img{
+	display: inline-block;
+	background-color: #ffffff;
+	margin-left: 10px;
+	border-radius: 100%;
+	
+	height: 60px;
+	width: 60px;
+	overflow: hidden;
+	
+}
+#sidebar .profile-name{
+	margin-left: 5px;
+	font-size: 2em;
+	height: 60px;
+	display: inline-block;
+	width: calc(100% - 80px - 20px);
+	overflow: auto;
+}
+#sidebar .profile-name .profile-place{
+	font-size: 0.4em;
+}
+#sidebar .profile-name .profile-place span{
+	margin-right: 5px;
+}
+#sidebar .profile-img img{
+	width: 100%;
+}
+#sidebar .profile-settings{
+	height: 30%;
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+	list-style-type: none;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+#sidebar .profile-settings li{
+	position:relative;
+	display: inline;
+	height: 20px;
+}
+#sidebar .profile-settings .notification-counter { 
+	display: inline;  
+    position:absolute;
+    top:-7px;
+    right: -7px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    border-radius: 100%;
+    background-color:#FF0000;
+    color:#fff;
+    font-size:9px;
+    font-weight:bold;
+}
+#sidebar .history{
+	height: 35%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	vertical-align: bottom; 
+}
+#sidebar .history .history-list{
+	overflow-y: auto;
+	height: calc(100% - 2em);
+}
+#sidebar .history .history-msg{
+	background-color: #60CBEB;
+	color: white;
+	margin-bottom: 5px;
+	padding: 5px;
+	margin-right: 5px;
+	float: right;
+	width: 97%;
+}
+#sidebar .history .history-msg:hover{
+	background-color: #87D4EB;
+}
+#sidebar h3{
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #B2D4EB;
+	line-height: 2em;
+	margin: 0px;
+}
+#sidebar .history .history-msg .history-msg-date{
+	color: #51AAC4;
+	margin-bottom: 0px;
+	float: right;
+}
+#sidebar .menu{
+	height: 10%;
+	font-size: 1.3em;
+	letter-spacing: 0.09em;
+	text-align: center;
+	margin-top: 20px;
+}
+#sidebar .menu .menu-list{
+	list-style-type: none;
+	height: 100%;
+}
+#sidebar .menu .menu-list li{
+	padding: 10px;
+	border-top: 1px solid #27525E;
+	height: 50%;
+}
+#sidebar .menu .menu-list span{
+	margin-right: 10px;
+}
+#sidebar .menu .menu-list li:first-child{
+	border: none;
+}
+#sidebar .people{
+	margin-top: 10px;
+	height: 30%;
+}
+#sidebar .people-list{
+	height: calc(100% - 2em);
+	overflow-y: auto;
+}
+#sidebar .people-item{
+	display: block;
+	height: 50px;
+	margin-bottom: 5px;
+}
+#sidebar .people .people-img{
+	display: inline-block;
+	background-color: #ffffff;
+	margin-left: 10px;
+	border-radius: 100%;
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.hidden{
+	display: none;
+}
+
+@media all and (max-width: 992px),
+screen and (max-device-width: 992px) {
+	#content .trw-travel .price{
+		font-size: 1em;
+	}
+	#content .trw-travel .trw-travel-img img{
+		height: 50px;
+		width: 50px;
+	}
+	#content .trw-travel .descr{
+		font-size: 0.7em;
+	}
+	#content .trw-travel .actions span{
+		font-size: 1.2em;
+	}
+	#sidebar .profile-name{
+		font-size: 1.2em;
+	}
+	#sidebar h3{
+		font-size: 1.1em;
+	}
+	#sidebar .history .history-msg{
+		font-size: 0.8em;
+	}
+	#sidebar .people-item{
+		font-size: 0.8em;
+	}
+	#sidebar .menu{
+		font-size: 1.1em;
+	}
+	#sidebar .profile-settings{
+		font-size: 1.1em;
+	}
+}

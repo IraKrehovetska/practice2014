@@ -51,4 +51,26 @@
             "bower-asset-library": "vendor/bower"
         }
     }
+    {
+    "name": "ira/yii2-",
+    "description": "my travel widget",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Ira Krehovetska",
+            "email": "krehovetska.irina@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mywidgets\\travels\\": ""
+        }
+    }
+}
+
 }

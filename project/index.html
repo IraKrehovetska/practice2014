@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="./style/style.css">
+	<link href="./style/bootstrap.min.css" rel="stylesheet">
+	<link href="./style/datepicker.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'
+	rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+
+			<div id="content" class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+				<div class="navbar header row">
+					<div class="searchbar-action col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<!-- <button type="button" class="btn btn-success">Пошук</button> -->
+						<h2>Пошук:</h2>
+					</div>
+					<div class="searchbar col-lg-9 col-md-9 col-sm-9 col-xs-9">
+						<div class="row">
+							<div class="input-group-sm col-lg-5 col-sm-5 col-md-5 col-xs-5">
+								<input type="text" class="form-control" placeholder="Від...">
+							</div>
+							<div class="btn-group col-lg-1 col-md-1 col-sm-1 col-xs-1"><button class="btn btn-default btn-arrows"><span class="glyphicon glyphicon-transfer"></span></button></div>
+							<div class="input-group-sm col-lg-5 col-md-5 col-sm-5 col-xs-5">
+								<input type="text" class="form-control" placeholder="До...">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-group-sm col-lg-5 col-md-5 col-sm-5 col-xs-5">
+								<input type="text" class="form-control" placeholder="ДД/ММ/РРРР">
+							</div>
+							<div class="btn-group col-lg-5 col-md-5 col-sm-5 col-xs-5 col-md-offset-1 col-lg-offset-1">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									Тип поїздки <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Одноразова поїздка</a></li>
+									<li><a href="#">Періодична поїздка</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div id="trw-content row">
+					<div class="trw-travel row">
+						<div class="trw-border pass col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="trw-travel-img col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src="imgs/user4.jpg" alt="user"></div>
+						<div class="descr col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="descr-title row">
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Від:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Івано-Франківськ</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">До:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Коломия</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Дата:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">21 листопада 2014</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Частота:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Щодня</span>
+							</div>
+						</div>
+						<div class="price col-lg-2 col-md-2 col-sm-2 col-xs-2">25 &#8372;</div>
+						<div class="actions col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							<span class="glyphicon glyphicon-ok-circle"></span>
+						</div>
+						
+					</div>
+					<div class="trw-travel row">
+						<div class="trw-border driver col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="trw-travel-img col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src="imgs/user2.jpg" alt="user"></div>
+						<div class="descr col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="descr-title row">
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Від:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Київ</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">До:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Івано-Франківськ</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Дата:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">15 жовтня 2014</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Частота:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Одноразова поїздка</span>
+							</div>
+						</div>
+						<div class="price col-lg-2 col-md-2 col-sm-2 col-xs-2">200 &#8372;</div>
+						<div class="actions col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							<span class="glyphicon glyphicon-ok-circle"></span>
+						</div>
+						
+					</div>
+					<div class="trw-travel row">
+						<div class="trw-border pass col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="trw-travel-img col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src="imgs/user3.jpg" alt="user"></div>
+						<div class="descr col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="descr-title row">
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Від:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Калуш</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">До:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Тернопіль</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Дата:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">10 жовтня 2014</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Частота:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Одноразова поїздка</span>
+							</div>
+							
+						</div>
+						<div class="price col-lg-2 col-md-2 col-sm-2 col-xs-2">40 &#8372;</div>
+						<div class="actions col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							<span class="glyphicon glyphicon-ok-circle"></span>
+						</div>
+						
+					</div>
+					<div class="trw-travel row">
+						<div class="trw-border pass col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="trw-travel-img col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src="imgs/user5.jpg" alt="user"></div>
+						<div class="descr col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="descr-title row">
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Від:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Івано-Франківськ</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">До:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Львів</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Дата:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">13 жовтня 2014</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Частота:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Раз в місяць</span>
+							</div>
+							
+						</div>
+						<div class="price col-lg-2 col-md-2 col-sm-2 col-xs-2">50 &#8372;</div>
+						<div class="actions col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							<span class="glyphicon glyphicon-ok-circle"></span>
+						</div>
+						
+					</div>
+					<div class="trw-travel row">
+						<div class="trw-border driver col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="trw-travel-img col-lg-2 col-md-2 col-sm-2 col-xs-2"><img src="imgs/user6.jpg" alt="user"></div>
+						<div class="descr col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="descr-title row">
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Від:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Київ</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">До:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Харків</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Дата:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">01 листопада 2014</span>
+								<span class="aux-text col-lg-2 col-md-2 col-sm-2 col-xs-2">Частота:</span>
+								<span class="descr-text col-lg-9 col-md-9 col-sm-9 col-xs-9">Одноразова поїздка</span>
+							</div>
+						</div>
+						<div class="price col-lg-2 col-md-2 col-sm-2 col-xs-2">170 &#8372;</div>
+						<div class="actions col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							<span class="glyphicon glyphicon-ok-circle"></span>
+						</div>
+					</div>
+
+					<ul class="pager">
+						<li class="previous disabled"><a href="#">&larr; Попередня</a></li>
+						<li class="next"><a href="#">Наступна &rarr;</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="sidebar" class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+				<div class="profile">
+					<div class="profile-img"><img src="./imgs/user.jpg" alt="avatar"></div>
+					<div class="profile-name">
+						Іванов Іван
+						<div class="profile-place"><span class="glyphicon glyphicon-map-marker"></span>Івано-Франківськ, Україна</div>
+					</div>
+					<ul class="profile-settings row">
+						<li class="col-md-3 col-lg-3 col-sm-3 col-sm-3 col-xs-3"><span class="glyphicon glyphicon-comment"> <span class="notification-counter">1</span></span></li>
+						<li class="col-md-3 col-lg-3 col-sm-3 col-sm-3 col-xs-3"><span class="glyphicon glyphicon-user"> <span class="notification-counter">3</span></span></li>
+						<li class="col-md-3 col-lg-3 col-sm-3 col-sm-3 col-xs-3"><span class="glyphicon glyphicon-cog"></span></li>
+						<li class="col-md-3 col-lg-3 col-sm-3 col-sm-3 col-xs-3"><span class="glyphicon glyphicon-log-out"></span></li>
+					</ul>
+				</div>
+				<div class="menu">
+					<ul class="menu-list">
+						<li><span class="glyphicon glyphicon-plus"></span>Створити</li>
+						<li class="active"><span class="glyphicon glyphicon-search"></span>Пошук</li>
+					</ul>
+				</div>
+				<div class="people">
+					<h3>ЛЮДИ</h3>
+					<div class="people-list">
+						<div class="people-item"><img src="imgs/user2.jpg" alt="" class="people-img"><span class="people-name">Ім’я Прізвище</span></div>
+						<div class="people-item"><img src="imgs/user4.jpg" alt="" class="people-img"><span class="people-name">Ім’я Прізвище</span></div>
+						<div class="people-item"><img src="imgs/user3.jpg" alt="" class="people-img"><span class="people-name">Ім’я Прізвище</span></div>
+						<div class="people-item"><img src="imgs/user5.jpg" alt="" class="people-img"><span class="people-name">Ім’я Прізвище</span></div>
+					</div>
+				</div>
+				<div class="history">
+					<h3>СПОВІЩЕННЯ</h3>
+					<div class="history-list">
+						<div class="history-msg ">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, repellat!</p>
+							<p class="history-msg-date">25.06 13:36</p>
+						</div>
+						<div class="history-msg ">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<p>Lorem ipsum dolor sit amet.</p>
+							<p class="history-msg-date">25.06 13:36</p>
+						</div>
+						<div class="history-msg ">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum quibusdam eos beatae, iste ea officia nobis. Nostrum esse ipsa at.</p>
+							<p class="history-msg-date">25.06 13:36</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/framework.js"></script>
+</body>
+</html>
